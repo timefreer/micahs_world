@@ -1,0 +1,16 @@
+home:
+  page: 'home'
+  controller: 'home'
+  action: 'index'
+about:
+  page: 'about'
+  controller: 'personal'
+  action: 'about'
+resume:
+  page: 'resume'
+  controller: 'personal'
+  action: 'resume'
+tools:
+  page: 'tools'
+  controller: 'tools'
+  action: 'index'

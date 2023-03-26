@@ -1,0 +1,18 @@
+<nav aria-labelledby="projects-header">
+  <h2 id="projects-header" class="primary-heading">
+    Projects
+  </h2>
+
+  <ul>
+    <li>
+      <%= link_to tools_path do %>
+        Tools
+        <% if @active_page == 'tools' %>
+          <span class="here">
+            (Here)
+          </span>
+        <% end %>
+      <% end %>
+    </li>
+  </ul>
+</nav>

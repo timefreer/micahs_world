@@ -1,6 +1,16 @@
-Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+# frozen_string_literal: true
 
-  # Defines the root path route ("/")
-  root "home#index"
+Rails.application.routes.draw do
+  get 'about', to: 'personal#about'
+  get 'resume', to: 'personal#resume'
+  get 'home', to: 'home#index'
+  get 'tools', to: 'tools#index'
+
+  namespace :tools do
+    namespace :core_keeper do
+      get 'stat_calculator', to: 'stat_calculator#index'
+    end
+  end
+
+  root 'home#index'
 end

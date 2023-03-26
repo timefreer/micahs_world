@@ -1,0 +1,125 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+
+@use "./themes";
+@use "./mixins";
+@use "nav";
+
+@font-face {
+  font-family: 'Andika';
+  src: url('Andika-Regular.ttf'),
+       url('Andika-Italic.ttf'),
+       url('Andika-Bold.ttf'),
+       url('Andika-BoldItalic.ttf');
+}
+
+@font-face {
+  font-family: 'RustyHooks';
+  src: url('RustyHooksRegular.ttf');
+}
+
+h1.primary-heading {
+  font-family: "RustyHooks", sans-serif;
+}
+
+h2.primary-heading {
+  font-size: 1.75em;
+  margin-bottom: 0;
+}
+
+body {
+  font-family: "Andika", sans-serif;
+  font-size: 20px;
+  min-height: 100vh;
+  min-width: 100vw;
+  margin: 0;
+
+  display: flex;
+}
+
+h1 {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+  font-size: 3em;
+  letter-spacing: 2px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  background: linear-gradient(to right, #5400B4, #0061D3, #009148, #CFD600, #E76C00, #C11321);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header, footer {
+  flex: 1;
+  max-width: 20vw;
+  padding: 5rem 2rem 0;
+
+  ul {
+    padding-left: 0;
+  }
+}
+
+main {
+  flex: 1 1 80vw;
+  display: flex;
+  flex-direction: column;
+}
+
+article#content {
+  flex: 1;
+  position: relative;
+  z-index: 0;
+  padding: 2em 5em 5em;
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    padding: 8px 8px 0;
+    border-radius: 30px 30px 0 0;
+    background: conic-gradient(from 180deg at 50% 100%, transparent 25%, #5400B4 25%, #0061D3, #009148, #CFD600, #E76C00, #C11321 75%, transparent 75%);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+  }
+
+  a {
+    border: 0 solid transparent;
+    border-image: linear-gradient(to left, #5400B4, #0061D3, #009148, #CFD600, #E76C00, #C11321) 1;
+    border-bottom-width: 5px;
+    transition: all 250ms;
+
+    &:hover {
+      border-bottom-width: 10px;
+    }
+  }
+}
+
+.link-icon {
+  filter: invert(99%) sepia(0%) saturate(1344%) hue-rotate(219deg) brightness(113%) contrast(80%);
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+}
+
+.here-icon {
+  filter: invert(99%) sepia(0%) saturate(1344%) hue-rotate(219deg) brightness(113%) contrast(80%);
+}
+
+.here {
+  background: linear-gradient(to bottom left, #5400B4, #0061D3, #009148, #CFD600, #E76C00, #C11321);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

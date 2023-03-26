@@ -1,0 +1,46 @@
+body.theme-neon-space {
+  $bg_color: darken(#400D51, 15%);
+  $secondary_bg_color: #FF7777;
+  $header_font_color: #31E1F7;
+  $default_font_color: lighten(#D800A6, 25%);
+
+  //color: $default_font_color;
+  color: darken(white, 10%);
+  background-color: $bg_color;
+  background-color: #121212;
+
+  transition: all 250ms ease-in-out;
+
+  //nav[role=navigation] {
+  //  border-bottom: 0.25em solid $secondary_bg_color;
+  //}
+
+  h1,h2,h3,h4,h5,h6 {
+    //color: $header_font_color;
+    //color: $secondary_bg_color;
+  }
+
+  main {
+    //padding-left: 2rem;
+    //padding-right: 2rem;
+  }
+
+  footer {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:visited {
+      color: inherit;
+    }
+
+    //&:hover,
+    //&:focus {
+    //  border-bottom: 0.4em solid $header_font_color;
+    //}
+  }
+}

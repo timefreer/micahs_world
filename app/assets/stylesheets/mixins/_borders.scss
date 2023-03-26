@@ -1,0 +1,23 @@
+@mixin colorful-border {
+  $border-width: 12px;
+  $min-width: 5em;
+  $border-width-total: $min-width;
+  $border-segment-width: $border-width-total / 4;
+  border: $border-width solid transparent;
+  display: inline-block;
+  min-width: $min-width;
+  border-image: linear-gradient(90deg,
+          rgba(49,225,247,1) 0,
+          rgba(49,225,247,1) calc(1 * #{$border-segment-width}),
+          rgba(64,13,81,1) calc(1 * #{$border-segment-width}),
+          rgba(64,13,81,1) calc(2 * #{$border-segment-width}),
+          rgba(216,0,166,1) calc(2 * #{$border-segment-width}),
+          rgba(216,0,166,1) calc(3 * #{$border-segment-width}),
+          rgba(255,119,119,1) calc(3 * #{$border-segment-width})) 1;
+
+  &:not(.active) {
+    //border-left: none;
+    //border-right: none;
+    //border-top: none;
+  }
+}

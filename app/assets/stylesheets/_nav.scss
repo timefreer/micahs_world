@@ -1,0 +1,23 @@
+@use "mixins/borders";
+
+nav {
+  ul {
+    list-style-type: none;
+    color: darken(white, 10%);
+
+    li {
+      //@include borders.colorful-border;
+
+      &.active {
+        //box-shadow: -2em 0 linear-gradient(to right, #5400B4, #0061D3, #009148, #CFD600, #E76C00, #C11321);
+        //border: 0 solid transparent;
+        //border-image: linear-gradient(to top, #5400B4, #0061D3, #009148, #CFD600, #E76C00, #C11321) 1;
+        //border-left-width: 5px;
+      }
+    }
+  }
+
+  ul.sub-nav {
+    margin-left: 1em;
+  }
+}

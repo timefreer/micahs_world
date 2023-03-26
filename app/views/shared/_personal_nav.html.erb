@@ -1,0 +1,44 @@
+<nav aria-labelledby="personal-header">
+  <h2 id="personal-header" class="primary-heading">
+    Personals
+  </h2>
+
+  <ul>
+    <li class=<%= active_class_for_page('about') %>>
+      <%= link_to about_path do %>
+        About
+        <% if @active_page == 'about' %>
+          <span class="here">
+            (Here)
+          </span>
+        <% end %>
+      <% end %>
+    </li>
+    <li>
+      My Accounts
+
+      <ul class="sub-nav">
+        <li>
+          <%= link_to 'https://www.linkedin.com/in/myka-micah/' do %>
+            <%= external_link_image_tag %> LinkedIn
+          <% end %>
+        </li>
+        <li>
+          <%= link_to 'https://github.com/timefreer' do %>
+            <%= external_link_image_tag %> Github
+          <% end %>
+        </li>
+        <li>
+          <%= link_to 'https://fosstodon.org/@timefreer' do %>
+            <%= external_link_image_tag %> Mastodon
+          <% end %>
+        </li>
+        <li>
+          <%= link_to 'https://steamcommunity.com/profiles/76561198064671958/' do %>
+            <%= external_link_image_tag %> Steam
+          <% end %>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
